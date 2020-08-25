@@ -1,0 +1,5 @@
+filename=$1
+shift
+rest=$@
+g++ -Wall $filename -o $(echo "$filename" | cut -f 1 -d '.')
+./$(echo "$filename" | cut -f 1 -d '.') $@
